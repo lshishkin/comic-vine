@@ -8,6 +8,7 @@ var request = require('request-promise')
 var indexRouter = require('./routes/index');
 
 var app = express();
+var key='6a1a9692ade19104b7ee7188055e048bdd6474a3'
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,12 +23,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api', function(req,res) {
   //modify the url in any way you want
-  let url = 'https://comicvine.gamespot.com/api/characters/?api_key=6a1a9692ade19104b7ee7188055e048bdd6474a3&format=json';
+  let url = `https://comicvine.gamespot.com/api/characters/?api_key=${key}&format=json`;
     req.headers['User-Agent'] = 'test'
     req.pipe(request(url)).pipe(res)
-  /*var newurl = 'https://comicvine.gamespot.com/api/characters/?api_key=6a1a9692ade19104b7ee7188055e048bdd6474a3&format=json';
-  request(newurl).pipe(res);*/
 });
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
