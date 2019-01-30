@@ -1,0 +1,62 @@
+.wrap-content.characters{
+    max-width: 1140px;
+    margin: 40px auto ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+article{
+    width: 327px;
+    font-family: Open Sans;
+    
+    a img{
+        height: 231px;
+        width:327px;
+        object-fit: cover;
+        object-position: top;
+        }
+      .subscription{
+          position: relative;
+        a .article__name{
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 18px;
+     } 
+      
+      
+
+.article__publisher{
+    font-size: 10px;
+    color: #C1C4CC;
+    margin-bottom: 49px;
+}
+.article__issues{
+    font-size: 10px;
+    color: #849ACC;
+   position: absolute;
+   top:21px;
+   right: 0;
+
+}
+      }  
+  
+     
+   
+}
+.button-wrap{
+    flex:1 100%;
+    display:flex;
+    justify-content: center;
+    button{
+        margin:29px auto;
+        display: block;
+        width: 386px;
+        height: 45px;
+        text-align: center;
+        border: none;
+        background: #2C467F;
+        font-weight: bold;
+font-size: 14px;
+color:#fff;
+    }
+}

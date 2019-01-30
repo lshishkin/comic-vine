@@ -1,0 +1,69 @@
+.wrap-content.character{
+    max-width: 1140px;
+    margin: 40px auto ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img.character_img{
+    width:416px;
+    height: 610px;
+    object-fit: cover;
+        object-position: top;
+}
+.charaction-description{
+    padding: 30px;
+    max-width: 530px;
+.character__name{
+    font-family: Open Sans;
+font-weight: bold;
+font-size: 48px;
+color: #2C467F;
+}
+.character__real-name{
+    margin-top: 33px;
+    padding-left: 90px;
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+span{position: absolute;
+left:0;
+color: #C1C4CC;}
+}
+.character__publisher-name{
+    padding-left: 90px;
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+    margin-top: 6px;
+span{position: absolute;
+left:0;
+color: #C1C4CC;}
+}
+.character__gender{
+    padding-left: 90px;
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+    margin-top: 6px;
+span{position: absolute;
+left:0;
+color: #C1C4CC;}
+}
+.character__update{
+    padding-left: 90px;
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+    margin-top: 6px;
+span{position: absolute;
+left:0;
+color: #C1C4CC;}
+}
+.character__deck{
+    margin-top: 33px;
+    font-size: 18px;
+color: #000000;
+text-indent: 1.5em;
+}
+}
