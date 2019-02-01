@@ -18,16 +18,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
 app.use('/api', function(req,res) {
   //modify the url in any way you want
   let url = `https://comicvine.gamespot.com/api/characters/?api_key=${key}&format=json`;
     req.headers['User-Agent'] = 'test'
     req.pipe(request(url)).pipe(res)
 });
-
+app.use(express.static(path.join(__dirname, 'client/build')))
+// Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'))
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
